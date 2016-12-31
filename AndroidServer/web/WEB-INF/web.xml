@@ -13,4 +13,14 @@
         <servlet-name>com.nightwingky.homeListView.HomeListViewServlet</servlet-name>
         <url-pattern>/HomeListViewServlet</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>com.nightwingky.shoppingcartListView.SCLvServlet</servlet-name>
+        <servlet-class>com.nightwingky.shoppingcartListView.SCLvServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>com.nightwingky.shoppingcartListView.SCLvServlet</servlet-name>
+        <url-pattern>/SCLvServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
