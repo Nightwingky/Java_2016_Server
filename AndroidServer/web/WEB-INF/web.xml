@@ -23,4 +23,14 @@
         <servlet-name>com.nightwingky.shoppingcartListView.SCLvServlet</servlet-name>
         <url-pattern>/SCLvServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>com.nightwingky.itemDescription.ItemServlet</servlet-name>
+        <servlet-class>com.nightwingky.itemDescription.ItemServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>com.nightwingky.itemDescription.ItemServlet</servlet-name>
+        <url-pattern>/ItemServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

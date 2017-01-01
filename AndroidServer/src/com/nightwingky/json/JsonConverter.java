@@ -9,6 +9,14 @@ import java.util.List;
  */
 public class JsonConverter {
 
+    public static String convert(Object object) {
+        JSONArray jsonArray = JSONArray.fromObject(object);
+
+        String jsonString = "{\"status\":1,\"data\":" + jsonArray.toString() + ",\"msg\":\"android\"}";
+
+        return jsonString;
+    }
+
     public static String convert(List list) {
         JSONArray jsonArray = JSONArray.fromObject(list);
 
