@@ -1,30 +1,32 @@
 package com.nightwingky.shoppingcartListView;
 
-import com.nightwingky.json.JsonConverter;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 /**
- * Created by nightwingky on 16-12-31.
+ * Created by nightwingky on 17-1-1.
  */
-@WebServlet("/SCLvServlet")
-public class SCLvServlet extends HttpServlet {
+@WebServlet("/SCAddServlet")
+public class SCAddServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request, response);
+        doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        SCLvDAO homeLvDAO = new SCLvDAO();
+        String title = request.getParameter("itemTitle");
 
-        List<SCLvVO> mList = homeLvDAO.queryAll();
+        SCLvDAO scLvDAO = new SCLvDAO();
 
-        String json = JsonConverter.convert(mList);
-        response.getWriter().append(json);
+        SCLvVO scLvVO =  scLvDAO.queryByTitle(title);
+
+        if(scLvVO == null) {
+            scLvDAO.insert(scLvDAO.queryInfo(title));
+        } else {
+            scLvDAO.updateAmount(title);
+        }
     }
 }

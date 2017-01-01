@@ -43,7 +43,7 @@ public class HomeLvDAO extends BaseDAO {
 
 //    public static void main(String[] args) {
 //        HomeLvDAO homeLvDAO = new HomeLvDAO();
-//        List<HomeLvVO> lvVOs = homeLvDAO.quertAll();
+//        List<HomeLvVO> lvVOs = homeLvDAO.queryAll();
 //
 //        JSONArray json = JSONArray.fromObject(lvVOs);
 //

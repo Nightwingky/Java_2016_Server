@@ -26,8 +26,11 @@ public class ItemDAO extends BaseDAO {
         ItemDescriptionVO itemDescriptionVO = new ItemDescriptionVO(
                 resultSet.getString("itemContentTitle"),
                 resultSet.getString("itemPicURL"),
-                resultSet.getString("itemDescription")
+                resultSet.getString("itemDescription"),
+                resultSet.getString("itemPrice")
         );
+
+        closeConnection(connection);
 
         return itemDescriptionVO;
     }

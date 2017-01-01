@@ -33,4 +33,14 @@
         <servlet-name>com.nightwingky.itemDescription.ItemServlet</servlet-name>
         <url-pattern>/ItemServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>com.nightwingky.shoppingcartListView.SCAddServlet</servlet-name>
+        <servlet-class>com.nightwingky.shoppingcartListView.SCAddServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>com.nightwingky.shoppingcartListView.SCAddServlet</servlet-name>
+        <url-pattern>/SCAddServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
